@@ -63,6 +63,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\scripts\AlcoholicFPSController.cs" />
     <Compile Include="Assets\scripts\TestFirstPersionUnit.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/workspaces/trainhard/unity/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>

@@ -1311,6 +1311,7 @@ GameObject:
   - component: {fileID: 772941784}
   - component: {fileID: 772941783}
   - component: {fileID: 772941785}
+  - component: {fileID: 772941786}
   m_Layer: 0
   m_Name: PlayerUnit
   m_TagString: Untagged
@@ -1358,7 +1359,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 772941782}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f35b8f01c8efc0f4cb5f12a7b7a47dc4, type: 3}
   m_Name: 
@@ -1366,9 +1367,29 @@ MonoBehaviour:
   characterCamera: {fileID: 963194227}
   speed: 6
   jumpSpeed: 8
-  shiftMultiplier: 2
+  shiftAdditionalSpeed: 6
   gravity: 20
   lookSensivity: 75
+--- !u!114 &772941786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772941782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 461cfb1c6b7b61f4182f26e96fe16318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterCamera: {fileID: 963194227}
+  speed: 6
+  jumpSpeed: 8
+  shiftAdditionalSpeed: 6
+  gravity: 20
+  lookSensivity: 75
+  health: 1
+  alcoMoveImpact: 2
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
