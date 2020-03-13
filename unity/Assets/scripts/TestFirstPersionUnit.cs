@@ -9,6 +9,7 @@ public class TestFirstPersionUnit : MonoBehaviour
 
     public float speed = 6.0f;
     public float jumpSpeed = 8.0f;
+    public float shiftAdditionalSpeed = 6.0f;
     public float gravity = 20.0f;
     public float lookSensivity = 1.0f;
 
@@ -30,14 +31,11 @@ public class TestFirstPersionUnit : MonoBehaviour
         if (characterController.isGrounded)
         {
             // We are grounded, so recalculate
-            // move direction directly from axes
 
-            
             moveDirection = transform.forward;
-            //moveDirection.x *= Input.GetAxis("Horizontal");
             moveDirection *= Input.GetAxis("Vertical");
             moveDirection += Input.GetAxis("Horizontal") * transform.right;
-            moveDirection *= speed;
+            moveDirection *= speed + Input.GetAxis("Shift") * shiftAdditionalSpeed;
 
             if (Input.GetButton("Jump"))
             {
