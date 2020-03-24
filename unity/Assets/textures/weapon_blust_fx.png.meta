@@ -1,0 +1,895 @@
+fileFormatVersion: 2
+guid: df1ecfe2ad419f64a96086e0a3f274ac
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6162093555168480017
+    second: weapon_blust_fx_0
+  - first:
+      213: 6369041843664239719
+    second: weapon_blust_fx_1
+  - first:
+      213: -7506362888851634994
+    second: weapon_blust_fx_2
+  - first:
+      213: 5821484521130167258
+    second: weapon_blust_fx_3
+  - first:
+      213: -60938923430887318
+    second: weapon_blust_fx_4
+  - first:
+      213: 6057791627977462716
+    second: weapon_blust_fx_5
+  - first:
+      213: -4595084050695577504
+    second: weapon_blust_fx_6
+  - first:
+      213: 2535014645722153140
+    second: weapon_blust_fx_7
+  - first:
+      213: 7709486097446388547
+    second: weapon_blust_fx_8
+  - first:
+      213: -9183003815004939052
+    second: weapon_blust_fx_9
+  - first:
+      213: 972558142477485848
+    second: weapon_blust_fx_10
+  - first:
+      213: 1655446565208357297
+    second: weapon_blust_fx_11
+  - first:
+      213: 352917316413504056
+    second: weapon_blust_fx_12
+  - first:
+      213: 1778170976418852129
+    second: weapon_blust_fx_13
+  - first:
+      213: 7591882642369012191
+    second: weapon_blust_fx_14
+  - first:
+      213: -3152061856704491595
+    second: weapon_blust_fx_15
+  - first:
+      213: 8547265225105054722
+    second: weapon_blust_fx_16
+  - first:
+      213: 8816447566629086897
+    second: weapon_blust_fx_17
+  - first:
+      213: 8955043862535568100
+    second: weapon_blust_fx_18
+  - first:
+      213: 7900341591310672945
+    second: weapon_blust_fx_19
+  - first:
+      213: 383231422423772669
+    second: weapon_blust_fx_20
+  - first:
+      213: 7854875661735226120
+    second: weapon_blust_fx_21
+  - first:
+      213: 5774370192755618760
+    second: weapon_blust_fx_22
+  - first:
+      213: 6159404492480839169
+    second: weapon_blust_fx_23
+  - first:
+      213: -7815014848618914130
+    second: weapon_blust_fx_24
+  - first:
+      213: -264661077240321771
+    second: weapon_blust_fx_25
+  - first:
+      213: 5057528229392247145
+    second: weapon_blust_fx_26
+  - first:
+      213: -6851743867324314417
+    second: weapon_blust_fx_27
+  - first:
+      213: 1850024957261913424
+    second: weapon_blust_fx_28
+  - first:
+      213: 4134930739521048142
+    second: weapon_blust_fx_29
+  - first:
+      213: 2805091301319481791
+    second: weapon_blust_fx_30
+  - first:
+      213: 2679068202950800916
+    second: weapon_blust_fx_31
+  - first:
+      213: -4857782849944762193
+    second: weapon_blust_fx_32
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: 1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: weapon_blust_fx_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 1779
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92b02202f0df484439e42da40bb3feb5
+      internalID: 6162093555168480017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapon_blust_fx_1
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 1787
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2755835d211f2a94ab4ad0f1c63da80d
+      internalID: 6369041843664239719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapon_blust_fx_2
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 1790
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8abd20b376cb8b4ca829406f1c5155f
+      internalID: -7506362888851634994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapon_blust_fx_3
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 1897
+        width: 59
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba72214b91b0f1946a7cfcc50b3a1d0a
+      internalID: 5821484521130167258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapon_blust_fx_4
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 1772
+        width: 177
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9e89de3864b0bc4485a213193744f98
+      internalID: -60938923430887318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapon_blust_fx_5
+      rect:
+        serializedVersion: 2
+        x: 897
+        y: 1903
+        width: 53
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cc3be6d293a76541933f90af0aac833
+      internalID: 6057791627977462716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapon_blust_fx_6
+      rect:
+        serializedVersion: 2
+        x: 1047
+        y: 1784
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af902db684ea7454ba8ec31d8e97ec6d
+      internalID: -4595084050695577504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapon_blust_fx_7
+      rect:
+        serializedVersion: 2
+        x: 1304
+        y: 1779
+        width: 200
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb2fcd2ad422a5e4ca9b4d81fd43dd8a
+      internalID: 2535014645722153140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapon_blust_fx_8
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 1779
+        width: 205
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c30b228e34ead549b3d5a1fe61c9b76
+      internalID: 7709486097446388547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapon_blust_fx_9
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 1825
+        width: 52
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2680267a1e5f2e4599e0f04cc5b046a
+      internalID: -9183003815004939052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapon_blust_fx_10
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 1555
+        width: 180
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73399e126f2ef8745abcd61b1dd3a285
+      internalID: 972558142477485848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapon_blust_fx_11
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 1570
+        width: 156
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e42b3794b4e726a4bbab56a0c3f5d0fb
+      internalID: 1655446565208357297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapon_blust_fx_12
+      rect:
+        serializedVersion: 2
+        x: 559
+        y: 1580
+        width: 149
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d445e1547d70394e90af293603ca438
+      internalID: 352917316413504056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapon_blust_fx_13
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 1681
+        width: 6
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cc9753c2654b8b4da70f78c1fbf26b7
+      internalID: 1778170976418852129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapon_blust_fx_14
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 1599
+        width: 86
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebffb16d3cb5e4843a9b9d720c943938
+      internalID: 7591882642369012191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapon_blust_fx_15
+      rect:
+        serializedVersion: 2
+        x: 1063
+        y: 1546
+        width: 179
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 651b327daca4a0b4ea2f3c9a2c70e725
+      internalID: -3152061856704491595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapon_blust_fx_16
+      rect:
+        serializedVersion: 2
+        x: 1318
+        y: 1548
+        width: 180
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5c45b9f55a9d8b40aa93c53f41db588
+      internalID: 8547265225105054722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapon_blust_fx_17
+      rect:
+        serializedVersion: 2
+        x: 1580
+        y: 1542
+        width: 177
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 891b5fe529aa940429b70c38528742ee
+      internalID: 8816447566629086897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapon_blust_fx_18
+      rect:
+        serializedVersion: 2
+        x: 962
+        y: 1589
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfb33fc28b3399445a274d17b3e00e7a
+      internalID: 8955043862535568100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapon_blust_fx_19
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1271
+        width: 241
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cc05eebba8297e4e89ef95e8ca26730
+      internalID: 7900341591310672945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapon_blust_fx_20
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 1280
+        width: 235
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3b4faf0e59bdb64687162f29ee0f4bb
+      internalID: 383231422423772669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapon_blust_fx_21
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 1277
+        width: 241
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4ec42bc0af4cb547888d49d256e5b07
+      internalID: 7854875661735226120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapon_blust_fx_22
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 1273
+        width: 235
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9e6b38b147d614459ace743b3bfb5cd
+      internalID: 5774370192755618760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapon_blust_fx_23
+      rect:
+        serializedVersion: 2
+        x: 1036
+        y: 1263
+        width: 241
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76865f20473a2f64a9221e898c45b08c
+      internalID: 6159404492480839169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapon_blust_fx_24
+      rect:
+        serializedVersion: 2
+        x: 1292
+        y: 1272
+        width: 241
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d7e05e1a67967243b0b80f3bb968ea9
+      internalID: -7815014848618914130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapon_blust_fx_25
+      rect:
+        serializedVersion: 2
+        x: 1548
+        y: 1257
+        width: 246
+        height: 247
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1963970d2e979b647947bc514d600e71
+      internalID: -264661077240321771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapon_blust_fx_26
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 1023
+        width: 229
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bfaa6cd5d9d28142851284bbbd57e38
+      internalID: 5057528229392247145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapon_blust_fx_27
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 1036
+        width: 217
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a45b776dfe74e7e4fb3c63e29a8928f7
+      internalID: -6851743867324314417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapon_blust_fx_28
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 1036
+        width: 212
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76d949df8bb10e941b9f8f2844b83b46
+      internalID: 1850024957261913424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapon_blust_fx_29
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 1029
+        width: 217
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 584801f59204f274cb5f43ea0e144834
+      internalID: 4134930739521048142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapon_blust_fx_30
+      rect:
+        serializedVersion: 2
+        x: 1045
+        y: 1005
+        width: 231
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5e417f8ed3900343a38a14428192f01
+      internalID: 2805091301319481791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapon_blust_fx_31
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 1020
+        width: 232
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bd96e67128e2074da612aee207a38d0
+      internalID: 2679068202950800916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapon_blust_fx_32
+      rect:
+        serializedVersion: 2
+        x: 1559
+        y: 1006
+        width: 226
+        height: 230
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1282b8f28cbdbc24eb05c57a8e15195c
+      internalID: -4857782849944762193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5533e63a743f0d142bfcac5e49604daf
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
