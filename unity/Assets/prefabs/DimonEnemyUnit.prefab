@@ -144,8 +144,15 @@ MonoBehaviour:
   randomFrases:
   - {fileID: 8300000, guid: f98be0e9fcfc25740976b7df3c9ca3c0, type: 3}
   - {fileID: 8300000, guid: d6302c0d6ff6b8f43aae5cd066a03c68, type: 3}
-  randomFraseRatePerSecond: 0.1
+  closeFrase: {fileID: 8300000, guid: a806fbadd9def8547a3736b5e2fdf689, type: 3}
+  closeFraseDistance: 3
+  incomingDamageFrase: {fileID: 8300000, guid: 61af5372cdc912f4482fe867067fdc9a, type: 3}
+  maxFraseRatePerSecond: 0.05
   maxLifeTimeSeconds: 60
+  moveSpeed: 3
+  stopMoveDistance: 2
+  health: 100
+  deathFrase: {fileID: 8300000, guid: 629a4ab260f6eac419f12d7aa5587f38, type: 3}
   playerUnit: {fileID: 0}
 --- !u!1 &4111754591129919696
 GameObject:
@@ -159,6 +166,7 @@ GameObject:
   - component: {fileID: 4111754591129919788}
   - component: {fileID: 4111754591129919789}
   - component: {fileID: 4111754591129919698}
+  - component: {fileID: 2440132570583435969}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -240,3 +248,16 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2440132570583435969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4111754591129919696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 093c3d2129955d446a2032bbfe926034, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  origin: {fileID: 4111754589113977602}

@@ -152,7 +152,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnUnitPrefabs:
   - {fileID: 4111754589113977602, guid: 48bd13bd40b1e8040bc7a606409287eb, type: 3}
-  spawnRateInSecond: 0.1
+  spawnRateInSecond: 0.3
   playerUnit: {fileID: 772941782}
   maxSpawnRadius: 50
 --- !u!4 &138883699

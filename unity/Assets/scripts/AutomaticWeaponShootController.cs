@@ -9,6 +9,8 @@ public class AutomaticWeaponShootController : MonoBehaviour
 
     public float fireRatePerSecond;
     public bool isShooting = false;
+    public float oneShotDamage = 50f;
+
     private AudioSource audioSource;
     private ParticleSystem.EmissionModule emissionModule;
     // Start is called before the first frame update
@@ -26,6 +28,20 @@ public class AutomaticWeaponShootController : MonoBehaviour
             if (isShooting)
             {
                 audioSource.PlayOneShot(shotSound);
+
+                //проверим куда стреляем
+                RaycastHit hit;
+                if (Physics.Raycast(transform.position, transform.forward, out hit))
+                {
+                    Debug.Log("!!!hit!!!");
+                    var damagable = hit.collider.GetComponent<IDamagable>();
+                    if(damagable != null)
+                    {
+                        Debug.Log("!!!applyDamage!!!");
+                        damagable.applyDamage(oneShotDamage);
+                    }
+                }
+
                 yield return new WaitForSeconds(1f / fireRatePerSecond);
             }
             else
