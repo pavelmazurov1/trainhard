@@ -65,7 +65,10 @@
   <ItemGroup>
     <Compile Include="Assets\scripts\AlcoholicFPSController.cs" />
     <Compile Include="Assets\scripts\AutomaticWeaponShootController.cs" />
+    <Compile Include="Assets\scripts\DimonUnit.cs" />
+    <Compile Include="Assets\scripts\PlayerData.cs" />
     <Compile Include="Assets\scripts\TestFirstPersionUnit.cs" />
+    <Compile Include="Assets\scripts\TestUnitSpawner.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/workspaces/trainhard/unity/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

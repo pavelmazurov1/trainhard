@@ -18,6 +18,12 @@ public class TestFirstPersionUnit : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        var sceneDataObject = GameObject.FindGameObjectWithTag("SceneData");
+        if(sceneDataObject)
+        {
+            sceneDataObject.GetComponent<PlayerData>().PlayerUnit = gameObject;
+        }
+
         characterController = GetComponent<CharacterController>();
 
         Cursor.lockState = CursorLockMode.Locked;
