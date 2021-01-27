@@ -57,6 +57,15 @@ public class TestFirstPersionUnit : MonoBehaviour
         // as an acceleration (ms^-2)
         moveDirection.y -= gravity * Time.deltaTime;
 
+        if (Input.GetButton("Sit"))
+        {
+            characterController.height = 0.5f;
+        } 
+        else
+        {
+            characterController.height = 1.7f;
+        }
+
         // Move the controller
         characterController.Move(moveDirection * Time.deltaTime);
     }
