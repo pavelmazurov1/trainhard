@@ -65,6 +65,7 @@
     <Compile Include="Assets\scripts\PlayerData.cs" />
     <Compile Include="Assets\scripts\IDamagable.cs" />
     <Compile Include="Assets\scripts\AutomaticWeaponShootController.cs" />
+    <Compile Include="Assets\MashroomUnit.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
