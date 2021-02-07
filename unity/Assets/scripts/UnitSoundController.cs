@@ -9,6 +9,8 @@ public class UnitSoundController : MonoBehaviour
 
     public AudioClip walkSound;
     public AudioClip runSound;
+    public AudioClip fallSound;
+    public AudioClip jumpStartSound;
 
     void Start()
     {
@@ -26,10 +28,22 @@ public class UnitSoundController : MonoBehaviour
                 {
                     case UnitState.MoveStateEnum.Walk:
                         audioSource.clip = walkSound;
+                        audioSource.loop = true;
                         audioSource.Play();
                         break;
                     case UnitState.MoveStateEnum.Run:
                         audioSource.clip = runSound;
+                        audioSource.loop = true;
+                        audioSource.Play();
+                        break;
+                    case UnitState.MoveStateEnum.Fall:
+                        audioSource.clip = fallSound;
+                        audioSource.loop = false;
+                        audioSource.Play();
+                        break;
+                    case UnitState.MoveStateEnum.Jump:
+                        audioSource.clip = jumpStartSound;
+                        audioSource.loop = false;
                         audioSource.Play();
                         break;
                     default:

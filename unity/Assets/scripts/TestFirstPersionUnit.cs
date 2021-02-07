@@ -32,7 +32,7 @@ public class TestFirstPersionUnit : MonoBehaviour
         if(unitState == null)
             unitState = GetComponent<UnitState>();
 
-        currentMoveCoroutine = StartCoroutine(idleMoveState());
+        currentMoveCoroutine = StartCoroutine(basicMoveState());
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -42,60 +42,24 @@ public class TestFirstPersionUnit : MonoBehaviour
     {
         return !(Mathf.Approximately(verticalAxis, Mathf.Epsilon) && Mathf.Approximately(horizontalAxis, Mathf.Epsilon));
     }
-
-    IEnumerator fallMoveState()
+    
+    IEnumerator basicMoveState()
     {
-        unitState.moveState = (int)UnitState.MoveStateEnum.Fall;
+        float fallTime = 0;
+
         while (true)
         {
             if (characterController.isGrounded)
             {
-                moveDirection.y = 0;
-                var verticalAxis = Input.GetAxis("Vertical");
-                var horizontalAxis = Input.GetAxis("Horizontal");
-                var jumpAction = Input.GetButton("Jump");
-                if (!anyMoveInput(verticalAxis, horizontalAxis) && !jumpAction)
-                {
-                    currentMoveCoroutine = StartCoroutine(idleMoveState());
-                    break;
-                }
-                else if (jumpAction)
-                {
-                    currentMoveCoroutine = StartCoroutine(jumpMoveState());
-                    break;
-                }
-                else
-                {
-                    currentMoveCoroutine = StartCoroutine(walkMoveState());
-                    break;
-                }
-            }
-            moveDirection.y -= gravity * Time.deltaTime;
-            characterController.Move(moveDirection * Time.deltaTime);
-            yield return null;
-        }
-    }
-
-    IEnumerator walkMoveState()
-    {
-        unitState.moveState = (int)UnitState.MoveStateEnum.Walk;
-        while (true)
-        {
-            if (characterController.isGrounded)
-            {
+                fallTime = 0;
                 var verticalAxis = Input.GetAxis("Vertical");
                 var horizontalAxis = Input.GetAxis("Horizontal");
                 var jumpAction = Input.GetButton("Jump");
                 if(!anyMoveInput(verticalAxis, horizontalAxis) && !jumpAction)
                 {
-                    currentMoveCoroutine = StartCoroutine(idleMoveState());
-                    break;
+                    unitState.moveState = (int)UnitState.MoveStateEnum.Idle;
+                    moveDirection = Vector3.zero;
                 } 
-                else if(jumpAction)
-                {
-                    currentMoveCoroutine = StartCoroutine(jumpMoveState());
-                    break;
-                }
                 else
                 {
                     moveDirection = transform.forward;
@@ -103,7 +67,13 @@ public class TestFirstPersionUnit : MonoBehaviour
                     moveDirection += horizontalAxis * transform.right;
                     moveDirection *= speed;
 
-                    if (Input.GetButton("Shift"))
+                    if (jumpAction)
+                    {
+                        unitState.moveState = (int)UnitState.MoveStateEnum.Jump;
+                        if (Input.GetButton("Shift")) moveDirection *= shiftSpeedMultiplyer;
+                        moveDirection.y = jumpSpeed;
+                    } 
+                    else if (Input.GetButton("Shift"))
                     {
                         unitState.moveState = (int)UnitState.MoveStateEnum.Run;
                         moveDirection *= shiftSpeedMultiplyer;
@@ -112,67 +82,18 @@ public class TestFirstPersionUnit : MonoBehaviour
                     {
                         unitState.moveState = (int)UnitState.MoveStateEnum.Walk;
                     }
-
-                    //moveDirection *= speed + Input.GetAxis("Shift") * shiftAdditionalSpeed;
-                    moveDirection.y -= gravity * Time.deltaTime;
-                    characterController.Move(moveDirection * Time.deltaTime);
                 }
+            }
+            else if (fallTime >= 1f)
+            {
+                unitState.moveState = (int)UnitState.MoveStateEnum.Fall;
             }
             else
             {
-                currentMoveCoroutine = StartCoroutine(fallMoveState());
-                break;
+                fallTime += Time.deltaTime;
             }
-            yield return null;
-        }
-    }
-
-    IEnumerator jumpMoveState()
-    {
-        unitState.moveState = (int)UnitState.MoveStateEnum.Jump;
-        var verticalAxis = Input.GetAxis("Vertical");
-        var horizontalAxis = Input.GetAxis("Horizontal");
-
-        moveDirection = transform.forward;
-        moveDirection *= Input.GetAxis("Vertical");
-        moveDirection += Input.GetAxis("Horizontal") * transform.right;
-        moveDirection *= speed;
-        if(Input.GetButton("Shift")) moveDirection *= shiftSpeedMultiplyer;
-        moveDirection.y = jumpSpeed;
-        moveDirection.y -= gravity * Time.deltaTime;
-        characterController.Move(moveDirection * Time.deltaTime);
-        float jumpMoveStateTime = 0;
-        
-        yield return null;
-        
-        while (true)
-        {
-            if (characterController.isGrounded)
-            {
-                verticalAxis = Input.GetAxis("Vertical");
-                horizontalAxis = Input.GetAxis("Horizontal");
-                if(!Mathf.Approximately(verticalAxis, 0.1f) || !Mathf.Approximately(horizontalAxis, 0.1f))
-                {
-                    currentMoveCoroutine = StartCoroutine(walkMoveState());
-                    break;
-                }
-                else
-                {
-                    currentMoveCoroutine = StartCoroutine(idleMoveState());
-                    break;
-                }
-            }
-            else
-            {
-                moveDirection.y -= gravity * Time.deltaTime;
-                characterController.Move(moveDirection * Time.deltaTime);
-                jumpMoveStateTime += Time.deltaTime;
-                if (jumpMoveStateTime > 1f)
-                {
-                    currentMoveCoroutine = StartCoroutine(fallMoveState());
-                    break;
-                }
-            }
+            moveDirection.y -= gravity * Time.deltaTime;
+            characterController.Move(moveDirection * Time.deltaTime);
             yield return null;
         }
     }
@@ -204,43 +125,16 @@ public class TestFirstPersionUnit : MonoBehaviour
 
             if (Input.GetButton("Jump"))
             {
-                currentMoveCoroutine = StartCoroutine(jumpMoveState());
-                break;
-            }
-            yield return null;
-        }
-    }
-
-    IEnumerator idleMoveState()
-    {
-        unitState.moveState = (int)UnitState.MoveStateEnum.Idle;
-        while (true)
-        {
-            if (characterController.isGrounded)
-            {
-                moveDirection = Vector3.zero;
                 var verticalAxis = Input.GetAxis("Vertical");
                 var horizontalAxis = Input.GetAxis("Horizontal");
-                var jumpAction = Input.GetButton("Jump");
-                if (!anyMoveInput(verticalAxis, horizontalAxis) && !jumpAction)
-                {
-                    moveDirection.y -= gravity * Time.deltaTime;
-                    characterController.Move(moveDirection * Time.deltaTime);
-                }
-                else if(jumpAction)
-                {
-                    currentMoveCoroutine = StartCoroutine(jumpMoveState());
-                    break;
-                } 
-                else
-                {
-                    currentMoveCoroutine = StartCoroutine(walkMoveState());
-                    break;
-                }
-            } 
-            else
-            {
-                currentMoveCoroutine = StartCoroutine(fallMoveState());
+                moveDirection = transform.forward;
+                moveDirection *= verticalAxis;
+                moveDirection += horizontalAxis * transform.right;
+                moveDirection *= speed;
+                moveDirection.y = jumpSpeed;
+                unitState.moveState = (int)UnitState.MoveStateEnum.Jump;
+
+                currentMoveCoroutine = StartCoroutine(basicMoveState());
                 break;
             }
             yield return null;

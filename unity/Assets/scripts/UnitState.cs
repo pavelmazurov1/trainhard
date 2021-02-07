@@ -36,5 +36,4 @@ public class UnitState : MonoBehaviour
         }
     }
     public event EventHandler moveStateChanged;
-
 }
