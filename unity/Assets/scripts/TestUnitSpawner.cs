@@ -32,9 +32,4 @@ public class TestUnitSpawner : MonoBehaviour
         StartCoroutine(spawnUnitRoutine());
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

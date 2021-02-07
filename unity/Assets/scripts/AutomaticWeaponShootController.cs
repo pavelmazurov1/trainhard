@@ -33,11 +33,11 @@ public class AutomaticWeaponShootController : MonoBehaviour
                 RaycastHit hit;
                 if (Physics.Raycast(transform.position, transform.forward, out hit))
                 {
-                    Debug.Log("!!!hit!!!");
+                    //Debug.Log("!!!hit!!!");
                     var damagable = hit.collider.GetComponent<IDamagable>();
                     if(damagable != null)
                     {
-                        Debug.Log("!!!applyDamage!!!");
+                        //Debug.Log("!!!applyDamage!!!");
                         damagable.applyDamage(oneShotDamage);
                     }
                 }

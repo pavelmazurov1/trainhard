@@ -145,11 +145,6 @@ public class DimonUnit : MonoBehaviour, IDamagable
     }
 
     private Vector3 playerPos;
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     void IDamagable.applyDamage(float value)
     {
