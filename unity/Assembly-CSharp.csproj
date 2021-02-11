@@ -64,11 +64,12 @@
     <Compile Include="Assets\scripts\TestUnitSpawner.cs" />
     <Compile Include="Assets\scripts\DimonUnit.cs" />
     <Compile Include="Assets\scripts\Ladder.cs" />
+    <Compile Include="Assets\scripts\UnitState.cs" />
     <Compile Include="Assets\scripts\PlayerData.cs" />
     <Compile Include="Assets\scripts\IDamagable.cs" />
     <Compile Include="Assets\scripts\AutomaticWeaponShootController.cs" />
     <Compile Include="Assets\scripts\UnitSoundController.cs" />
-    <Compile Include="Assets\scripts\UnitState.cs" />
+    <Compile Include="Assets\scripts\Door.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

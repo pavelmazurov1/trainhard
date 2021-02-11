@@ -160,7 +160,7 @@ public class TestFirstPersionUnit : MonoBehaviour
         if (Input.GetButton("Use"))
         {
             RaycastHit hitInfo;
-            if(Physics.Raycast(characterCamera.transform.position, characterCamera.transform.forward, out hitInfo, 1))
+            if(Physics.Raycast(characterCamera.transform.position, characterCamera.transform.forward, out hitInfo, 2))
             {
                 var ladder = hitInfo.collider.GetComponent<Ladder>();
                 if(ladder != null)
@@ -168,6 +168,13 @@ public class TestFirstPersionUnit : MonoBehaviour
                     StopCoroutine(currentMoveCoroutine);
                     currentMoveCoroutine = StartCoroutine(climbMoveState(ladder));
                 }
+
+                var door = hitInfo.collider.GetComponent<Door>();
+                if (door != null)
+                {
+                    door.Toggle();
+                }
+
             }
         }
     }
