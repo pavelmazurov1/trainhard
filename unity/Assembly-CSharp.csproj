@@ -67,9 +67,9 @@
     <Compile Include="Assets\scripts\UnitState.cs" />
     <Compile Include="Assets\scripts\PlayerData.cs" />
     <Compile Include="Assets\scripts\IDamagable.cs" />
+    <Compile Include="Assets\scripts\Door.cs" />
     <Compile Include="Assets\scripts\AutomaticWeaponShootController.cs" />
     <Compile Include="Assets\scripts\UnitSoundController.cs" />
-    <Compile Include="Assets\scripts\Door.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
