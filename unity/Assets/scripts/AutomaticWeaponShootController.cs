@@ -54,7 +54,7 @@ public class AutomaticWeaponShootController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        emissionModule.rate = fireRatePerSecond;
+        emissionModule.rateOverTime = fireRatePerSecond;
         
         var firePressed = Input.GetButton("Fire1");
         if (isShooting && !firePressed)

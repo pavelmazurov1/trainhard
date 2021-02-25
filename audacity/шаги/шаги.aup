@@ -1,22 +1,22 @@
 <?xml version="1.0" standalone="no" ?>
 <!DOCTYPE project PUBLIC "-//audacityproject-1.3.0//DTD//EN" "http://audacity.sourceforge.net/xml/audacityproject-1.3.0.dtd" >
-<project xmlns="http://audacity.sourceforge.net/xml/" projname="шаги_data" version="1.3.0" audacityversion="2.4.2" sel0="0.0000000000" sel1="4.6904308390" vpos="448" h="0.0000000000" zoom="43.3380406931" rate="44100.0" snapto="off" selectionformat="hh:mm:ss + milliseconds" frequencyformat="Hz" bandwidthformat="octaves">
+<project xmlns="http://audacity.sourceforge.net/xml/" projname="шаги_data" version="1.3.0" audacityversion="2.4.2" sel0="0.0000000000" sel1="4.6904308390" vpos="0" h="0.0000000000" zoom="43.3380406931" rate="44100.0" snapto="off" selectionformat="hh:mm:ss + milliseconds" frequencyformat="Hz" bandwidthformat="octaves">
 	<tags/>
-	<wavetrack name="шаги_ходьба" isSelected="1" height="150" minimized="0" channel="0" linked="1" mute="1" solo="0" rate="44100" gain="1.0" pan="0.0" colorindex="0">
+	<wavetrack name="шаги_ходьба" isSelected="1" height="150" minimized="0" channel="0" linked="1" mute="0" solo="1" rate="44100" gain="1.0" pan="0.0" colorindex="0">
 		<waveclip offset="0.00000000" colorindex="0">
 			<sequence maxsamples="262144" sampleformat="262159" numsamples="206848">
 				<waveblock start="0">
-					<simpleblockfile filename="e08081fb.au" len="206848" min="-0.650567" max="0.741474" rms="0.034629"/>
+					<simpleblockfile filename="e080899d.au" len="206848" min="-0.365841" max="0.416962" rms="0.019473"/>
 				</waveblock>
 			</sequence>
 			<envelope numpoints="0"/>
 		</waveclip>
 	</wavetrack>
-	<wavetrack name="шаги_ходьба" isSelected="1" height="150" minimized="0" channel="1" linked="0" mute="1" solo="0" rate="44100" gain="1.0" pan="0.0" colorindex="0">
+	<wavetrack name="шаги_ходьба" isSelected="1" height="150" minimized="0" channel="1" linked="0" mute="0" solo="1" rate="44100" gain="1.0" pan="0.0" colorindex="0">
 		<waveclip offset="0.00000000" colorindex="0">
 			<sequence maxsamples="262144" sampleformat="262159" numsamples="206848">
 				<waveblock start="0">
-					<simpleblockfile filename="e0808720.au" len="206848" min="-0.65057" max="0.741482" rms="0.034629"/>
+					<simpleblockfile filename="e0808f8e.au" len="206848" min="-0.365843" max="0.416966" rms="0.019473"/>
 				</waveblock>
 			</sequence>
 			<envelope numpoints="0"/>
@@ -62,7 +62,7 @@
 			<envelope numpoints="0"/>
 		</waveclip>
 	</wavetrack>
-	<wavetrack name="шаги_бег" isSelected="0" height="150" minimized="0" channel="0" linked="1" mute="0" solo="1" rate="44100" gain="1.0" pan="0.0" colorindex="0">
+	<wavetrack name="шаги_бег" isSelected="0" height="150" minimized="0" channel="0" linked="1" mute="1" solo="0" rate="44100" gain="1.0" pan="0.0" colorindex="0">
 		<waveclip offset="0.00000000" colorindex="0">
 			<sequence maxsamples="262144" sampleformat="262159" numsamples="129261">
 				<waveblock start="0">
@@ -72,7 +72,7 @@
 			<envelope numpoints="0"/>
 		</waveclip>
 	</wavetrack>
-	<wavetrack name="шаги_бег" isSelected="0" height="150" minimized="0" channel="1" linked="0" mute="0" solo="1" rate="44100" gain="1.0" pan="0.0" colorindex="0">
+	<wavetrack name="шаги_бег" isSelected="0" height="150" minimized="0" channel="1" linked="0" mute="1" solo="0" rate="44100" gain="1.0" pan="0.0" colorindex="0">
 		<waveclip offset="0.00000000" colorindex="0">
 			<sequence maxsamples="262144" sampleformat="262159" numsamples="129261">
 				<waveblock start="0">
