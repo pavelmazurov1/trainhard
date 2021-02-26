@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class ExitDialogScript : MonoBehaviour
@@ -8,21 +9,20 @@ public class ExitDialogScript : MonoBehaviour
     public Button YesButton;
     public Button NoButton;
     public GameObject Panel;
+    public Text MessageLabel;
     void Start()
     {
         Panel.SetActive(false);
-        YesButton.onClick.AddListener(() =>
-        {
-            MainDirector.Instance.ExitGame();
-        });
         NoButton.onClick.AddListener(() =>
         {
             Panel.SetActive(false);
         });
     }
 
-    public void Open()
+    public void Open(string messageText, UnityAction call)
     {
+        MessageLabel.text = messageText;
+        YesButton.onClick.AddListener(call);
         Panel.SetActive(true);
     }
 
