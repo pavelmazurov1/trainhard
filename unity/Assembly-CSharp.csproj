@@ -76,6 +76,8 @@
     <Compile Include="Assets\scripts\UnitSoundController.cs" />
     <Compile Include="Assets\scripts\InGameMenuScript.cs" />
     <Compile Include="Assets\scripts\ElevatorLevelDirector.cs" />
+    <Compile Include="Assets\scripts\GameData.cs" />
+    <Compile Include="Assets\scripts\Starter.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

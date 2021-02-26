@@ -29,7 +29,7 @@ public class MainMenuScript : MonoBehaviour
         });
         ExitButton.onClick.AddListener(() => {
             ExitDialog.Open("ÂÛÉÒÈ ÈÇ ÈÃÐÛ?", ()=> {
-                //todo save user data
+                GameData.Instance.Save();
                 Application.Quit();
             });
         });
