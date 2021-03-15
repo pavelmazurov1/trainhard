@@ -56,6 +56,8 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\scripts\ElevatorLevelDirector.cs" />
+    <Compile Include="Assets\scripts\InGameMenuScript.cs" />
     <Compile Include="Assets\scripts\ThirdPersonUnitController.cs" />
     <Compile Include="Assets\scripts\TestFirstPersionUnit.cs" />
     <Compile Include="Assets\scripts\MainMenuScript.cs" />
@@ -71,13 +73,12 @@
     <Compile Include="Assets\scripts\PlayerData.cs" />
     <Compile Include="Assets\scripts\IDamagable.cs" />
     <Compile Include="Assets\scripts\Door.cs" />
+    <Compile Include="Assets\scripts\Starter.cs" />
     <Compile Include="Assets\scripts\AutomaticWeaponShootController.cs" />
+    <Compile Include="Assets\scripts\GameData.cs" />
     <Compile Include="Assets\scripts\SettingsMenuScript.cs" />
     <Compile Include="Assets\scripts\UnitSoundController.cs" />
-    <Compile Include="Assets\scripts\InGameMenuScript.cs" />
-    <Compile Include="Assets\scripts\ElevatorLevelDirector.cs" />
-    <Compile Include="Assets\scripts\GameData.cs" />
-    <Compile Include="Assets\scripts\Starter.cs" />
+    <Compile Include="Assets\scripts\IntroLevelDirector.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

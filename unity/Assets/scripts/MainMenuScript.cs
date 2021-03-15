@@ -22,7 +22,7 @@ public class MainMenuScript : MonoBehaviour
         Cursor.visible = true;
 
         NewGameButton.onClick.AddListener(() => {
-            SceneManager.LoadScene("уровень_элеватор");
+            SceneManager.LoadScene("интро");
         });
         SettingsButton.onClick.AddListener(() => {
             SettingsMenu.Open();
