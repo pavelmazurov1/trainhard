@@ -63,6 +63,7 @@
     <Compile Include="Assets\scripts\MainMenuScript.cs" />
     <Compile Include="Assets\scripts\AlcoholicFPSController.cs" />
     <Compile Include="Assets\scripts\MashroomUnit.cs" />
+    <Compile Include="Assets\scripts\IntroLevelDirector.cs" />
     <Compile Include="Assets\scripts\SlimeUnit.cs" />
     <Compile Include="Assets\scripts\DamagableProxy.cs" />
     <Compile Include="Assets\scripts\TestUnitSpawner.cs" />
@@ -78,7 +79,6 @@
     <Compile Include="Assets\scripts\GameData.cs" />
     <Compile Include="Assets\scripts\SettingsMenuScript.cs" />
     <Compile Include="Assets\scripts\UnitSoundController.cs" />
-    <Compile Include="Assets\scripts\IntroLevelDirector.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

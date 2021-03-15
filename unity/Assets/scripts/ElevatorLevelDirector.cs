@@ -14,7 +14,15 @@ public class ElevatorLevelDirector : MonoBehaviour
         GameData = GameData.Instance;
         GameData.Scene = "уровень_элеватор";
         GameData.Save();
+
+        StartCoroutine(Main());
     }
+
+    IEnumerator Main()
+    {
+        yield return StartCoroutine(InGameMenu.UnFade(5));
+    }
+
 
     // Update is called once per frame
     void Update()

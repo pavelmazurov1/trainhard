@@ -21,6 +21,8 @@ public class InGameMenuScript : MonoBehaviour
     public UnityEvent continueGame;
     //public UnityEvent exitLevel;
 
+    public Image FadeScreen;
+
     public void Close()
     {
         if (IsOpened)
@@ -127,5 +129,35 @@ public class InGameMenuScript : MonoBehaviour
             }
             yield return null;
         }
+    }
+
+    public IEnumerator Fade(float fadeTime)
+    {
+        FadeScreen.enabled = true;
+        FadeScreen.color = new Color(0, 0, 0, 0);
+        float time = 0;
+        while (time <= fadeTime)
+        {
+            var color = FadeScreen.color;
+            color.a = time / fadeTime;
+            FadeScreen.color = color;
+            time += Time.deltaTime;
+            yield return null;
+        }
+    }
+
+    public IEnumerator UnFade(float fadeTime)
+    {
+        FadeScreen.color = new Color(0, 0, 0, 1);
+        float time = 0;
+        while (time <= fadeTime)
+        {
+            var color = FadeScreen.color;
+            color.a = 1 - time / fadeTime;
+            FadeScreen.color = color;
+            time += Time.deltaTime;
+            yield return null;
+        }
+        FadeScreen.enabled = false;
     }
 }
