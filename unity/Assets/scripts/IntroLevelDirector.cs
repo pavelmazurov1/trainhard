@@ -14,85 +14,94 @@ public class IntroLevelDirector : MonoBehaviour
     public AudioClip IntroAudio;
     public AudioSource AudioSource;
 
-    public List<string> Messages;
-    public int CurrentMessage = 0;
-
     public float AppearTextTime = 1f;
 
     void Start()
     {
-        Messages.Add("10 лет назад на земле случилась эпидемия неизвестного вируса. Вирус оказался совершенно новым и непохожим на другие вирусы, с которыми человечеству приходилось бороться ранее.");
-        Messages.Add("Он обладал высокой контагеозностью и на людей действовал поразному: кого-то убивал за одну ночь, кого-то медленно и мучительно убивал месяцами. Люди погибали миллионами, очень быстро эпидемия охватила весь мир.");
-        Messages.Add("Правительства пытались бороться с распространением эпидемии, закрывали границы, но сдержать распространение вируса не удалось.");
-        Messages.Add("Мировая экономика не выдержала удар. Заводы и фабрики остановились, электростанции перестали давать ток, транспортное сообщение умерло. ");
-        Messages.Add("Запасы еды, воды и ресурсов быстро истощались. Правительства стран очень быстро потеряли контроль над ситуацией и были сметены толпами обезумевших голодных и больных людей. ");
-        Messages.Add("Мир погрузился в хаос.");
-
         AudioSource.clip = IntroAudio;
         AudioSource.Play();
 
-        StartCoroutine(ShowText());
+        StartCoroutine(Main());
     }
 
-    IEnumerator ShowText()
+    IEnumerator ShowText(string message, Text CurrentText, float StayTime)
     {
+        float timeSpent = 0;
+        CurrentText.text = message;
+        CurrentText.color = new Color(1, 1, 1, 0);
+        while (timeSpent <= AppearTextTime)
+        {
+            var textColor = CurrentText.color;
+            textColor.a = timeSpent / AppearTextTime;
+            //Debug.Log(textColor.a);
+            CurrentText.color = textColor;
+            timeSpent += Time.deltaTime;
+            yield return null;
+        }
+
+        yield return new WaitForSeconds(StayTime);
+    }
+
+    IEnumerator ClearAllText(float ClearTextTime)
+    {
+        float timeSpent = 0;
+        while (timeSpent <= ClearTextTime)
+        {
+            var textColor = Text1.color;
+            textColor.a = 1 - timeSpent / ClearTextTime;
+            Text1.color = textColor;
+            Text2.color = textColor;
+            Text3.color = textColor;
+            timeSpent += Time.deltaTime;
+            yield return null;
+        }
+
         Text1.text = "";
         Text2.text = "";
         Text3.text = "";
-
         Text1.color = new Color(1, 1, 1, 0);
         Text2.color = new Color(1, 1, 1, 0);
         Text3.color = new Color(1, 1, 1, 0);
+    }
 
+    IEnumerator Main()
+    {
+        //clear texts
+        Text1.text = "";
+        Text2.text = "";
+        Text3.text = "";
+        Text1.color = new Color(1, 1, 1, 0);
+        Text2.color = new Color(1, 1, 1, 0);
+        Text3.color = new Color(1, 1, 1, 0);
+        //wait
         yield return new WaitForSeconds(5);
 
-        Text[] texts = { Text1, Text2, Text3 };
+        yield return StartCoroutine(ShowText("10 лет назад на земле случилась эпидемия неизвестного вируса. Вирус оказался совершенно новым и непохожим на другие вирусы, с которыми человечеству приходилось бороться ранее."
+            , Text1, 7));
 
-        float timeSpent = 0;
+        yield return StartCoroutine(ShowText("Он обладал высокой контагеозностью и на людей действовал поразному: кого-то убивал за одну ночь, кого-то медленно и мучительно убивал месяцами. Люди погибали миллионами, очень быстро эпидемия охватила весь мир."
+            , Text2, 7));
 
-        while (true)
-        {
-            if (CurrentMessage == Messages.Count) break;
+        yield return StartCoroutine(ShowText("Правительства пытались бороться с распространением эпидемии, закрывали границы, но сдержать распространение вируса не удалось."
+            , Text3, 7));
 
-            if(CurrentMessage > 0 && CurrentMessage % 3 == 0)
-            {
-                timeSpent = 0;
-                while (timeSpent <= AppearTextTime)
-                {
-                    var textColor = Text1.color;
-                    textColor.a = 1 - timeSpent / AppearTextTime;
-                    Text1.color = textColor;
-                    Text2.color = textColor;
-                    Text3.color = textColor;
-                    timeSpent += Time.deltaTime;
-                    yield return null;
-                }
+        yield return StartCoroutine(ClearAllText(AppearTextTime));
 
-                Text1.text = "";
-                Text2.text = "";
-                Text3.text = "";
-                Text1.color = new Color(1, 1, 1, 0);
-                Text2.color = new Color(1, 1, 1, 0);
-                Text3.color = new Color(1, 1, 1, 0);
-            }
+        yield return StartCoroutine(ShowText("Мировая экономика не выдержала удар. Заводы и фабрики остановились, электростанции перестали давать ток, транспортное сообщение умерло. "
+            , Text1, 7));
 
-            Text CurrentText = texts[CurrentMessage % 3];
-            CurrentText.text = Messages[CurrentMessage];
+        yield return StartCoroutine(ShowText("Запасы еды, воды и ресурсов быстро истощались. Правительства стран очень быстро потеряли контроль над ситуацией и были сметены толпами обезумевших голодных и больных людей. "
+            , Text2, 7));
 
-            timeSpent = 0;
-            while (timeSpent <= AppearTextTime)
-            {
-                var textColor = CurrentText.color;
-                textColor.a = timeSpent / AppearTextTime;
-                //Debug.Log(textColor.a);
-                CurrentText.color = textColor;
-                timeSpent += Time.deltaTime;
-                yield return null;
-            }
+        yield return StartCoroutine(ShowText("Мир погрузился в хаос."
+            , Text3, 5));
 
-            CurrentMessage += 1;
-            yield return new WaitForSeconds(10);
-        }
+        yield return StartCoroutine(ClearAllText(AppearTextTime));
+
+        yield return StartCoroutine(ShowText("То малое колличество людей, которым повезло выжить, собрались в поселения. Люди продолжают страдать от новой болезни. Единицы перенесли болезнь без последствий. Еда, вода и лекарства стали самыми ценными ресурсами..."
+            , Text2, 10));
+
+        yield return StartCoroutine(ClearAllText(AppearTextTime));
 
         SceneManager.LoadScene("уровень_элеватор");
     }
