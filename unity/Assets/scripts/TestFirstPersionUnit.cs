@@ -144,6 +144,7 @@ public class TestFirstPersionUnit : MonoBehaviour
         }
     }
 
+    private RaycastHit[] _HitResults = new RaycastHit[5];
     // Update is called once per frame
     void Update()
     {
@@ -162,11 +163,12 @@ public class TestFirstPersionUnit : MonoBehaviour
 
         if (Input.GetButton("Use"))
         {
-            RaycastHit hitInfo;
-            if(Physics.Raycast(characterCamera.transform.position, characterCamera.transform.forward, out hitInfo, 2))
+            int hitCount = Physics.RaycastNonAlloc(characterCamera.transform.position, characterCamera.transform.forward, _HitResults, 2);
+            for (int i = 0; i < hitCount; ++i)
             {
+                var hitInfo = _HitResults[i];
                 var ladder = hitInfo.collider.GetComponent<Ladder>();
-                if(ladder != null)
+                if (ladder != null)
                 {
                     StopCoroutine(currentMoveCoroutine);
                     currentMoveCoroutine = StartCoroutine(climbMoveState(ladder));
@@ -178,7 +180,13 @@ public class TestFirstPersionUnit : MonoBehaviour
                     door.Toggle();
                 }
 
+                var interractableItem = hitInfo.collider.GetComponent<InterractableItem>();
+                if (interractableItem != null)
+                {
+                    interractableItem.DoInterract();
+                }
             }
+            
         }
     }
 }

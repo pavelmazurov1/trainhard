@@ -11,6 +11,8 @@ public class GameData : MonoBehaviour
     public string Scene;
     public float LookSensivity;
 
+    public AudioSource FlatAudioSource;
+
     private void Awake()
     {
         if (GameData.Instance != null)

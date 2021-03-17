@@ -79,6 +79,8 @@
     <Compile Include="Assets\scripts\GameData.cs" />
     <Compile Include="Assets\scripts\SettingsMenuScript.cs" />
     <Compile Include="Assets\scripts\UnitSoundController.cs" />
+    <Compile Include="Assets\scripts\ColliderProxy.cs" />
+    <Compile Include="Assets\scripts\InterractableItem.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
